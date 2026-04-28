@@ -1,0 +1,249 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    min-height: 100vh;
+    background-color: #f8fbff;
+    
+   
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(30, 58, 138, 0.1) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(96, 165, 250, 0.2) 0px, transparent 50%);
+    background-attachment: fixed; /* Background tidak ikut bergeser saat scroll */
+}
+
+
+.login-card {
+    background: #fff;
+    width: 95%;
+    max-width: 450px;
+    padding: 40px;
+    border-radius: 40px; 
+    box-shadow: 0 10px 50px rgba(0,0,0,0.03); /* Bayangan halus */
+    text-align: center;
+}
+
+.title {
+    font-family: 'Playfair Display', serif;
+    color: #1a2d55;
+    margin-bottom: 15px;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.logo-container img {
+    width: 200px;
+    margin-top: -10px;
+    margin-bottom: 30px;
+    margin-left: -13px; /* Penyesuaian posisi visual logo */
+}
+
+
+.tab-menu {
+    display: flex;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 30px;
+}
+
+.tab-item {
+    flex: 1; /* Memberi porsi lebar yang sama antara Member & Agen */
+    padding-bottom: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #9eabbf;
+    border-bottom: 3px solid transparent; /* Garis bawah default transparan */
+    font-weight: 700;
+}
+
+.tab-item.active {
+    color: #1a2d55;
+    border-bottom: 3px solid #1a2d55; /* Garis bawah biru tua saat aktif */
+}
+
+
+.input-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    font-family: 'Playfair Display', serif;
+    display: block;
+    margin-bottom: 8px;
+    color: #1a2d55;
+    font-weight: 500;
+}
+
+.inner-input {
+    position: relative; /* Menjadi patokan posisi untuk ikon di dalamnya */
+    display: flex;
+    align-items: center;
+}
+
+.inner-input input {
+    width: 100%;
+    padding: 15px 15px 15px 45px; /* Padding kiri besar agar tidak menimpa ikon */
+    border: 1px solid #dce4f0;
+    border-radius: 30px; 
+    outline: none;
+    font-size: 14px;
+    color: #1a2d55;
+}
+
+.inner-input input::placeholder {
+    color: #b0c0d9;
+}
+
+.icon-field {
+    position: absolute;
+    left: 18px; /* Menaruh ikon di dalam kotak sebelah kiri */
+    color: #b0c0d9;
+    font-size: 16px;
+    z-index: 2;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 18px; /* Menaruh ikon mata di sebelah kanan */
+    color: #b0c0d9;
+    cursor: pointer;
+}
+
+
+.extra-row {
+    display: flex;
+    justify-content: space-between; /* Menaruh Checkbox di kiri & Lupa Sandi di kanan */
+    align-items: center;
+    font-size: 13px;
+    margin-bottom: 20px;
+    color: #5c7294;
+}
+
+/* Mengatur presisi Checkbox & Teks */
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.remember-me input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    accent-color: #2b4c7e; /* Warna centang disesuaikan dengan brand */
+}
+
+.remember-me label {
+    cursor: pointer;
+    line-height: 1;
+    user-select: none; /* Mencegah teks terpilih saat klik cepat */
+}
+
+.extra-row a {
+    color: #2b4c7e;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn-login {
+    width: 100%;
+    height: 50px;
+    background-color: #2b4c7e;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 25px;
+    transition: 0.3s ease;
+}
+
+.btn-login:hover {
+    opacity: 0.9;
+}
+
+.social-section {
+    width: 100%; 
+    margin: 0 auto;
+}
+
+/* Garis pemisah dengan teks di tengah */
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #b0c0d9;
+    font-size: 13px;
+    margin: 10px 0 30px 0;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1; /* Garis akan mengambil ruang kosong secara otomatis */
+    border-bottom: 1px solid #dce4f0;
+}
+
+.divider:not(:empty)::before { margin-right: 15px; }
+.divider:not(:empty)::after { margin-left: 15px; }
+
+/* Desain tombol sosial (Google/Apple) */
+.btn-social {
+    width: 100%;
+    height: 50px; 
+    border: 1px solid #dce4f0;
+    border-radius: 30px; 
+    background: white;
+    margin-bottom: 12px;
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+    gap: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-social:hover {
+    background-color: #f8fbff;
+    border-color: #1a2d55;
+}
+
+.btn-social img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Khusus penyesuaian ikon Apple agar terlihat lebih simetris */
+.btn-apple img {
+    margin-top: 2px;
+    margin-left: -5px;
+}
+
+.btn-social span {
+    font-size: 14px;
+    color: #1a2d55;
+    font-weight: 700;
+}
+
+.footer-text {
+    margin-top: 15px;
+    font-size: 13px;
+    color: #9eabbf;
+}
+
+.footer-text a {
+    color: #2b4c7e;
+    font-weight: 700;
+    text-decoration: none;
+}
